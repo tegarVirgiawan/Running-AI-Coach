@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary-color: #007BFF;
+    --secondary-color: #4CAF50;
+    --bg-color: #121212;
+    --surface-color: #1E1E1E;
+    --text-color: #E0E0E0;
+    --text-muted: #A0A0A0;
+    --border-color: #333;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+header {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: var(--surface-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+header h1 {
+    color: var(--primary-color);
+}
+
+#run-form {
+    background-color: var(--surface-color);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.form-section {
+    margin-bottom: 2rem;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+input[type="number"], textarea {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.time-inputs {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.hidden { display: none; }
+
+#results {
+    margin-top: 3rem;
+    background-color: var(--surface-color);
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.result-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.metric-card {
+    background-color: var(--bg-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+}
+
+.metric-card h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+.metric-card p {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.ai-analysis {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+}
+
+#ai-result {
+    background-color: var(--bg-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    white-space: pre-wrap; /* Agar format teks dari AI rapi */
+    line-height: 1.8;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    color: var(--text-muted);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .container {
+        padding: 0.5rem;
+    }
+    #run-form, #results {
+        padding: 1.5rem;
+    }
+}
